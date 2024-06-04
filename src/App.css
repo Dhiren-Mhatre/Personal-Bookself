@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+/* src/App.css */
+.app {
+  font-family:Arial, Helvetica, sans-serif;
+   padding: 2rem 2rem;
+   transform: translateY(-2rem);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
+   letter-spacing: 0.05rem;
+   background: rgb(124,43,204);
+   background: linear-gradient(90deg, rgba(124,43,204,1) 0%, rgba(182,151,151,1) 51%, rgba(87,28,188,1) 100%);
+  background-clip: padding-box; /* Gradient extends behind padding */
+}
+.search-page{
+  transform: translateY(-2rem);
+
+}
+.search-page h1{
+  text-align: center;
+  width: 100%;
+}
+
+.app .link-button{
+ margin:1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-radius: 0.7rem;
+  background: #d5f365;
+  border: none;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.4s;
+  transition: 0.3s ease-in-out;
+  }
+
+  nav {
+  align-items: center;
+ 
+
+  }
+  .app .link-button:hover{
+    box-shadow: 7px 5px 56px -14px #C3D900;
+  }
+  
+  .app .link-button:active{
+    transform: scale(0.97);
+ box-shadow: 7px 5px 56px -10px #C3D900;
+  }
+
+ 
+
+nav {
+  margin-bottom: 20px;
+}
+ 
+
+ 
+
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+
+.book-card {
+  border:none;
+  padding: 10px;
+  width: 200px;
   display: flex;
   flex-direction: column;
+  color:white;
+  font-weight: bold !important;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: rgba(124, 43, 204, 0.6); /* Set background color with opacity */
+  transition: 0.3s ease-in-out;
+/* Alternative with radial gradient (opacity applied within each color): */
+background: radial-gradient(circle, 
+  rgba(150, 107, 193, 0.6) 0%, 
+  rgba(226,209,221,0.6) 0%, 
+  rgba(237,170,170,0.6) 0%, 
+  rgba(124,30,131,0.6) 82%, 
+  rgba(60, 9, 149, 0.6) 100%
+);
 }
-
-.App-link {
-  color: #61dafb;
+.book-card:hover{
+  box-shadow: 7px 5px 56px -5px #101010;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.book-card button{
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;font-weight: bold;
+  transition: 0.3s ease-in-out;
+  color:rgb(202, 184, 164);
+  background: rgb(119,45,253);
+background: radial-gradient(circle, rgba(119,45,253,1) 0%, rgba(34,193,195,0.8904899135446686) 100%);
+}
+.book-card button:hover{
+  
+  transform: translateY(-0.3rem);
+  background: rgb(34,193,195);
+background: radial-gradient(circle, rgba(34,193,195,0.8904899135446686) 0%, rgba(119,45,253,1) 100%);
+}
+.book-card h3{
+  align-items: center;
+}
+.bookshelf {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+@media screen and (max-width: 768px) { /* Adjust max-width as needed */
+  body {
+    width: 80%;
+    margin: 0 auto; /* Center the content horizontally on mobile */
   }
 }
